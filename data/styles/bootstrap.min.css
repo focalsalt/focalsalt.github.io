@@ -7936,6 +7936,14 @@ fieldset:disabled .btn {
     padding: 3rem !important
 }
 
+.p-6 {
+    padding: 4.5rem !important
+}
+
+.p-7 {
+    padding: 6rem !important
+}
+
 .px-0 {
     padding-right: 0 !important;
     padding-left: 0 !important
@@ -8018,14 +8026,6 @@ fieldset:disabled .btn {
 
 .pt-5 {
     padding-top: 3rem !important
-}
-
-.pt-6 {
-    padding-top: 4.5rem !important
-}
-
-.pt-7 {
-    padding-top: 6rem !important
 }
 
 .pe-0 {
