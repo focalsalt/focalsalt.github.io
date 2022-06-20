@@ -9,6 +9,15 @@
     <!-- Site CSS -->
     <link rel="stylesheet" href="../data/styles/bootstrap.min.css">
     <link rel="stylesheet" href="../data/styles/img-disable-drag.css">
+    <style>
+        p, .stroke
+        { text-shadow: 
+            -1px -1px 0 #060606,
+            1px -1px 0 #060606,
+            -1px 1px 0 #060606,
+            1px 1px 0 #060606;
+        }
+    </style>
     <!-- Site JS -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
@@ -101,7 +110,8 @@
                 <h1>Welcome</h1><br><br>
                 <h4>Please click on the tab above to view skills</h4>
             </div>
-            <div id="warrior" class="container tab-pane fade" style="background-color: #363637;"><br>
+            <div id="warrior" class="container tab-pane fade" style="background-color: #363637;">
+                <br><br><br><br>
                 <h4>
                     <span style="color: #FF5555;">●: Fallen</span>
                     <span style="color: #FFFFFF;">, </span>
@@ -117,9 +127,10 @@
                             <td><img src="../data/images/skill_blank.png"></td>
                             <td><img src="../data/images/skill_blank.png"></td>
                             <td><img src="../data/images/skill_blank.png"></td>
-                            <td data-toggle="popover" title="猛烈撞擊地面，在大範圍內造成高額傷害" data-content="技能點需求：1">
+                            <td data-toggle="popover" title="猛烈撞擊地面，在大範圍內造成高額傷害"
+                                data-content="技能點需求：1">
                                 <img src="../data/images/skill_warrior.gif">
-                                <p style="color: #55FF55;">Bash</p>
+                                <p class="stroke" style="color: #55FF55;">Bash</p>
                             </td>
                             <td><img src="../data/images/skill_blank.png"></td>
                             <td><img src="../data/images/skill_blank.png"></td>
@@ -140,14 +151,16 @@
                         <tr>
                             <td><img src="../data/images/skill_blank.png"></td>
                             <td><img src="../data/images/skill_blank.png"></td>
-                            <td data-toggle="popover" title="減少Bash的魔力消耗" data-content="技能點需求：1">
+                            <td data-toggle="popover" title="減少Bash的魔力消耗"
+                                data-content="技能點需求：1">
                                 <img src="../data/images/skill_1.png">
-                                <p style="color: #FFFFFF;">Cheaper Bash</p>
+                                <p class="stroke" style="color: #FFFFFF;">Cheaper Bash</p>
                             </td>
                             <td><img src="../data/images/branch/10.png"></td>
-                            <td data-toggle="popover" title="使用長矛時提高主攻的傷害和距離" data-content="技能點需求：1">
+                            <td data-toggle="popover" title="使用長矛時提高主攻的傷害和距離"
+                                data-content="技能點需求：1">
                                 <img src="../data/images/skill_1.png">
-                                <p style="color: #FFFFFF;">Spear Proficiency I</p>
+                                <p class="stroke" style="color: #FFFFFF;">Spear Proficiency I</p>
                             </td>
                             <td><img src="../data/images/skill_blank.png"></td>
                             <td><img src="../data/images/skill_blank.png"></td>
@@ -170,9 +183,10 @@
                             <td><img src="../data/images/skill_blank.png"></td>
                             <td><img src="../data/images/skill_blank.png"></td>
                             <td><img src="../data/images/skill_blank.png"></td>
-                            <td data-toggle="popover" title="Bash將在更遠的範圍內重擊第二次" data-content="技能點需求：1">
+                            <td data-toggle="popover" title="Bash將在更遠的範圍內重擊第二次"
+                                data-content="技能點需求：1">
                                 <img src="../data/images/skill_2.png">
-                                <p style="color: #FFAA00;">Double Bash</p>
+                                <p class="stroke" style="color: #FFAA00;">Double Bash</p>
                             </td>
                             <td><img src="../data/images/skill_blank.png"></td>
                             <td><img src="../data/images/skill_blank.png"></td>
@@ -204,22 +218,24 @@
                         <tr>
                             <td><img src="../data/images/branch/7.png"></td>
                             <td><img src="../data/images/branch/10.png"></td>
-                            <td data-toggle="popover" title="使用Charge後，猛烈撞擊地面並造成傷害" data-content="技能點需求：1">
+                            <td data-toggle="popover" title="使用Charge後，猛烈撞擊地面並造成傷害"
+                                data-content="技能點需求：1">
                                 <img src="../data/images/skill_2.png">
-                                <p style="color: #FFAA00;">Heavy Impact</p>
+                                <p class="stroke" style="color: #FFAA00;">Heavy Impact</p>
                             </td>
                             <td><img src="../data/images/branch/10.png"></td>
-                            <td data-toggle="popover" title="高速前衝（在Charge時按住Shift以停止Charge）" data-content="技能點需求：1">
+                            <td data-toggle="popover" title="高速前衝（在Charge時按住Shift以停止Charge）"
+                                data-content="技能點需求：1">
                                 <img src="../data/images/skill_warrior.gif">
-                                <p style="color: #55FF55;">Charge</p>
+                                <p class="stroke" style="color: #55FF55;">Charge</p>
                             </td>
                             <td><img src="../data/images/branch/10.png"></td>
                             <td data-toggle="popover"
                                 title="使您的皮膚變硬並永久增加 5% 的抵抗力。你從物品中獲得的每 1% 或 1 點生命恢復數值，獲得 10 生命值（最大 +100）"
                                 data-content="技能點需求：1">
                                 <img src="../data/images/skill_1.png"
-                                    style="background-image: radial-gradient(#55FFFF, #363637 80%);">
-                                <p style="color: #FFFFFF;">Tougher skin</p>
+                                    style="background-image: radial-gradient(#55FFFF, #363637 70%);">
+                                <p class="stroke" style="color: #FFFFFF;">Tougher skin</p>
                             </td>
                             <td><img src="../data/images/skill_blank.png"></td>
                             <td><img src="../data/images/skill_blank.png"></td>
@@ -228,8 +244,8 @@
                             <td data-toggle="popover" title="從物品中獲得的每 1% 或 1 點主攻擊傷害，獲得 2% 移動速度（最大 +20%）"
                                 data-content="技能點需求：1">
                                 <img src="../data/images/skill_1.png"
-                                    style="background-image: radial-gradient(#FF5555, #363637 80%);">
-                                <p style="color: #FFFFFF;">Vehement</p>
+                                    style="background-image: radial-gradient(#FF5555, #363637 70%);">
+                                <p class="stroke" style="color: #FFFFFF;">Vehement</p>
                             </td>
                             <td><img src="../data/images/branch/10.png"></td>
                             <td><img src="../data/images/branch/8.png"></td>
@@ -243,19 +259,22 @@
                         <tr>
                             <td><img src="../data/images/branch/7.png"></td>
                             <td><img src="../data/images/branch/10.png"></td>
-                            <td data-toggle="popover" title="將敵人擊往空中並造成大量傷害" data-content="技能點需求：1">
+                            <td data-toggle="popover" title="將敵人擊往空中並造成大量傷害"
+                                data-content="技能點需求：1">
                                 <img src="../data/images/skill_warrior.gif">
-                                <p style="color: #55FF55;">Uppercut</p>
+                                <p class="stroke" style="color: #55FF55;">Uppercut</p>
                             </td>
                             <td><img src="../data/images/branch/10.png"></td>
-                            <td data-toggle="popover" title="減少Charge的魔力消耗" data-content="技能點需求：1">
+                            <td data-toggle="popover" title="減少Charge的魔力消耗"
+                                data-content="技能點需求：1">
                                 <img src="../data/images/skill_1.png">
-                                <p style="color: #FFFFFF;">Cheaper Charge</p>
+                                <p class="stroke" style="color: #FFFFFF;">Cheaper Charge</p>
                             </td>
                             <td><img src="../data/images/branch/10.png"></td>
-                            <td data-toggle="popover" title="發出恐怖的咆哮，造成傷害，拉扯附近的敵人，並為自己和隊友增加傷害抗性" data-content="技能點需求：1">
+                            <td data-toggle="popover" title="發出恐怖的咆哮，造成傷害，拉扯附近的敵人，並為自己和隊友增加傷害抗性"
+                                data-content="技能點需求：1">
                                 <img src="../data/images/skill_warrior.gif">
-                                <p style="color: #55FF55;">War Scream</p>
+                                <p class="stroke" style="color: #55FF55;">War Scream</p>
                             </td>
                             <td><img src="../data/images/branch/10.png"></td>
                             <td><img src="../data/images/branch/8.png"></td>
@@ -294,30 +313,34 @@
                             <td><img src="../data/images/branch/9.png"></td>
                         </tr>
                         <tr>
-                            <td data-toggle="popover" title="增加所有地屬攻擊的基礎傷害" data-content="技能點需求：1">
+                            <td data-toggle="popover" title="增加所有地屬攻擊的基礎傷害"
+                                data-content="技能點需求：1">
                                 <img src="../data/images/skill_1.png"
-                                    style="background-image: radial-gradient(#FF5555, #363637 80%);">
-                                <p style="color: #FFFFFF;">Earth Mastery</p>
+                                    style="background-image: radial-gradient(#FF5555, #363637 70%);">
+                                <p class="stroke" style="color: #FFFFFF;">Earth Mastery</p>
                             </td>
                             <td><img src="../data/images/skill_blank.png"></td>
-                            <td data-toggle="popover" title="增加所有雷屬攻擊的基礎傷害" data-content="技能點需求：1">
+                            <td data-toggle="popover" title="增加所有雷屬攻擊的基礎傷害"
+                                data-content="技能點需求：1">
                                 <img src="../data/images/skill_1.png"
-                                    style="background-image: radial-gradient(#FF5555, #363637 80%);">
-                                <p style="color: #FFFFFF;">Thunder Mastery</p>
+                                    style="background-image: radial-gradient(#FF5555, #363637 70%);">
+                                <p class="stroke" style="color: #FFFFFF;">Thunder Mastery</p>
                             </td>
                             <td><img src="../data/images/branch/10.png"></td>
                             <td><img src="../data/images/branch/0.png"></td>
                             <td><img src="../data/images/branch/10.png"></td>
-                            <td data-toggle="popover" title="增加所有風屬攻擊的基礎傷害" data-content="技能點需求：1">
+                            <td data-toggle="popover" title="增加所有風屬攻擊的基礎傷害"
+                                data-content="技能點需求：1">
                                 <img src="../data/images/skill_1.png"
-                                    style="background-image: radial-gradient(#FFFF55, #363637 80%);">
-                                <p style="color: #FFFFFF;">Air Mastery</p>
+                                    style="background-image: radial-gradient(#FFFF55, #363637 70%);">
+                                <p class="stroke" style="color: #FFFFFF;">Air Mastery</p>
                             </td>
                             <td><img src="../data/images/skill_blank.png"></td>
-                            <td data-toggle="popover" title="增加所有火屬攻擊的基礎傷害" data-content="技能點需求：1">
+                            <td data-toggle="popover" title="增加所有火屬攻擊的基礎傷害"
+                                data-content="技能點需求：1">
                                 <img src="../data/images/skill_1.png"
-                                    style="background-image: radial-gradient(#55FFFF, #363637 80%);">
-                                <p style="color: #FFFFFF;">Fire Mastery</p>
+                                    style="background-image: radial-gradient(#55FFFF, #363637 70%);">
+                                <p class="stroke" style="color: #FFFFFF;">Fire Mastery</p>
                             </td>
                         </tr>
                         <tr>
@@ -325,10 +348,11 @@
                             <td><img src="../data/images/skill_blank.png"></td>
                             <td><img src="../data/images/branch/9.png"></td>
                             <td><img src="../data/images/skill_blank.png"></td>
-                            <td data-toggle="popover" title="增加所有水屬攻擊的基礎傷害" data-content="技能點需求：1">
+                            <td data-toggle="popover" title="增加所有水屬攻擊的基礎傷害"
+                                data-content="技能點需求：1">
                                 <img src="../data/images/skill_1.png"
-                                    style="background-image: radial-gradient(#FFFF55, #363637 80%);">
-                                <p style="color: #FFFFFF;">Water Mastery</p>
+                                    style="background-image: radial-gradient(#FFFF55, #363637 70%);">
+                                <p class="stroke" style="color: #FFFFFF;">Water Mastery</p>
                             </td>
                             <td><img src="../data/images/skill_blank.png"></td>
                             <td><img src="../data/images/branch/9.png"></td>
@@ -336,30 +360,33 @@
                             <td><img src="../data/images/branch/9.png"></td>
                         </tr>
                         <tr>
-                            <td data-toggle="popover" title="Bash會在更遠的範圍內重擊四次" data-content="技能點需求：2">
+                            <td data-toggle="popover" title="Bash會在更遠的範圍內重擊四次"
+                                data-content="技能點需求：2">
                                 <img src="../data/images/skill_2.png"
-                                    style="background-image: radial-gradient(#FF5555, #363637 80%);">
-                                <p style="color: #FFAA00;">Quadruple Bash</p>
+                                    style="background-image: radial-gradient(#FF5555, #363637 70%);">
+                                <p class="stroke" style="color: #FFAA00;">Quadruple Bash</p>
                             </td>
                             <td><img src="../data/images/branch/3.png"></td>
-                            <td data-toggle="popover" title="被Uppercut擊中的生物會在空中爆炸並受到額外傷害" data-content="技能點需求：2">
+                            <td data-toggle="popover" title="被Uppercut擊中的生物會在空中爆炸並受到額外傷害"
+                                data-content="技能點需求：2">
                                 <img src="../data/images/skill_2.png"
-                                    style="background-image: radial-gradient(#FF5555, #363637 80%);">
-                                <p style="color: #FFAA00;">Fireworks</p>
+                                    style="background-image: radial-gradient(#FF5555, #363637 70%);">
+                                <p class="stroke" style="color: #FFAA00;">Fireworks</p>
                             </td>
                             <td><img src="../data/images/skill_blank.png"></td>
                             <td><img src="../data/images/branch/9.png"></td>
                             <td><img src="../data/images/skill_blank.png"></td>
-                            <td data-toggle="popover" title="使用Charge時對擋路的敵人造成傷害" data-content="技能點需求：2">
+                            <td data-toggle="popover" title="使用Charge時對擋路的敵人造成傷害"
+                                data-content="技能點需求：2">
                                 <img src="../data/images/skill_2.png">
-                                <p style="color: #FFAA00;">Flyby Jab</p>
+                                <p class="stroke" style="color: #FFAA00;">Flyby Jab</p>
                             </td>
                             <td><img src="../data/images/branch/3.png"></td>
                             <td data-toggle="popover" title="Uppercut會點燃怪物，每0.6秒造成一次傷害"
                                 data-content="技能點需求：2，需求技能：Uppercut">
                                 <img src="../data/images/skill_2.png"
-                                    style="background-image: radial-gradient(#55FFFF, #363637 80%);">
-                                <p style="color: #FFAA00;">Flaming Uppercut</p>
+                                    style="background-image: radial-gradient(#55FFFF, #363637 70%);">
+                                <p class="stroke" style="color: #FFAA00;">Flaming Uppercut</p>
                             </td>
                         </tr>
                         <tr>
@@ -370,14 +397,15 @@
                             <td data-toggle="popover" title="Uppercut將以更長和更寬的角度進行橫掃攻擊。並將所有元素轉化成水"
                                 data-content="技能點需求：2，需求技能：Uppercut，最低Battle Monk需求：1">
                                 <img src="../data/images/skill_2.png"
-                                    style="background-image: radial-gradient(#FFFF55, #363637 80%);">
-                                <p style="color: #FFAA00;">Half-Moon Swipe</p>
+                                    style="background-image: radial-gradient(#FFFF55, #363637 70%);">
+                                <p class="stroke" style="color: #FFAA00;">Half-Moon Swipe</p>
                             </td>
                             <td><img src="../data/images/skill_blank.png"></td>
                             <td><img src="../data/images/skill_blank.png"></td>
-                            <td data-toggle="popover" title="War Scream造成更多傷害" data-content="技能點需求：1">
+                            <td data-toggle="popover" title="War Scream造成更多傷害"
+                                data-content="技能點需求：1">
                                 <img src="../data/images/skill_1.png">
-                                <p style="color: #FFFFFF;">Iron Lungs</p>
+                                <p class="stroke" style="color: #FFFFFF;">Iron Lungs</p>
                             </td>
                             <td><img src="../data/images/skill_blank.png"></td>
                         </tr>
@@ -409,14 +437,15 @@
                             <td data-toggle="popover" title="連續施放三個不同的法術後，你的下一個法術將消耗 5 魔力"
                                 data-content="技能點需求：2，最低Battle Monk需求：3">
                                 <img src="../data/images/skill_4.png"
-                                    style="background-image: radial-gradient(#FFFF55, #363637 80%);">
-                                <p style="color: #FF5555;">Generalist</p>
+                                    style="background-image: radial-gradient(#FFFF55, #363637 70%);">
+                                <p class="stroke" style="color: #FF5555;">Generalist</p>
                             </td>
                             <td><img src="../data/images/branch/3.png"></td>
-                            <td data-toggle="popover" title="躲避附近敵人攻擊時，有30%的機率瞬發回擊" data-content="技能點需求：2">
+                            <td data-toggle="popover" title="躲避附近敵人攻擊時，有30%的機率瞬發回擊"
+                                data-content="技能點需求：2">
                                 <img src="../data/images/skill_2.png"
-                                    style="background-image: radial-gradient(#FFFF55, #363637 80%);">
-                                <p style="color: #FFAA00;">Counter</p>
+                                    style="background-image: radial-gradient(#FFFF55, #363637 70%);">
+                                <p class="stroke" style="color: #FFAA00;">Counter</p>
                             </td>
                             <td><img src="../data/images/skill_blank.png"></td>
                             <td><img src="../data/images/skill_blank.png"></td>
@@ -424,8 +453,8 @@
                                 title="施放War Scream時，在你周圍創造一個神聖護盾，使所有受到的傷害降低 70%，持續 3 次命中。 （20 秒冷卻）"
                                 data-content="技能點需求：2，需求技能：War Scream，最低Paladin需求：3">
                                 <img src="../data/images/skill_4.png"
-                                    style="background-image: radial-gradient(#55FFFF, #363637 80%);">
-                                <p style="color: #FF5555;">Mantle of the Bovemists</p>
+                                    style="background-image: radial-gradient(#55FFFF, #363637 70%);">
+                                <p class="stroke" style="color: #FF5555;">Mantle of the Bovemists</p>
                             </td>
                             <td><img src="../data/images/skill_blank.png"></td>
                         </tr>
@@ -435,8 +464,8 @@
                                 title="施放War Scream後，墮落。（15 秒冷卻時間）在那種狀態下你無法治愈。墮落時，你每損失 2% 的生命值，就會為你的攻擊增加 +4 傷害（最多 +120）"
                                 data-content="技能點需求：2，需求技能：War Scream，最低Fallen需求：2">
                                 <img src="../data/images/skill_4.png"
-                                    style="background-image: radial-gradient(#FF5555, #363637 80%);">
-                                <p style="color: #FF5555;">Bak'al's Grasp</p>
+                                    style="background-image: radial-gradient(#FF5555, #363637 70%);">
+                                <p class="stroke" style="color: #FF5555;">Bak'al's Grasp</p>
                             </td>
                             <td><img src="../data/images/skill_blank.png"></td>
                             <td><img src="../data/images/branch/9.png"></td>
@@ -447,27 +476,30 @@
                             <td><img src="../data/images/skill_blank.png"></td>
                         </tr>
                         <tr>
-                            <td data-toggle="popover" title="使用長矛時提高主攻的傷害和距離" data-content="技能點需求：1">
+                            <td data-toggle="popover" title="使用長矛時提高主攻的傷害和距離"
+                                data-content="技能點需求：1">
                                 <img src="../data/images/skill_1.png">
-                                <p style="color: #FFFFFF;">Spear Proficiency II</p>
+                                <p class="stroke" style="color: #FFFFFF;">Spear Proficiency II</p>
                             </td>
                             <td><img src="../data/images/branch/10.png"></td>
                             <td><img src="../data/images/branch/3.png"></td>
-                            <td data-toggle="popover" title="減少Uppercut的魔力消耗" data-content="技能點需求：1">
+                            <td data-toggle="popover" title="減少Uppercut的魔力消耗"
+                                data-content="技能點需求：1">
                                 <img src="../data/images/skill_1.png">
-                                <p style="color: #FFFFFF;">Cheaper Uppercut</p>
+                                <p class="stroke" style="color: #FFFFFF;">Cheaper Uppercut</p>
                             </td>
                             <td><img src="../data/images/branch/10.png"></td>
-                            <td data-toggle="popover" title="在Change期間，您可以操縱和改變方向。" data-content="技能點需求：2">
+                            <td data-toggle="popover" title="在Change期間，您可以操縱和改變方向。"
+                                data-content="技能點需求：2">
                                 <img src="../data/images/skill_2.png"
-                                    style="background-image: radial-gradient(#FFFF55, #363637 80%);">
-                                <p style="color: #FFAA00;">Aerodynamics</p>
+                                    style="background-image: radial-gradient(#FFFF55, #363637 70%);">
+                                <p class="stroke" style="color: #FFAA00;">Aerodynamics</p>
                             </td>
                             <td><img src="../data/images/branch/3.png"></td>
                             <td data-toggle="popover" title="被War Scream傷害的生物將只針對你至少 5 秒。減少War Scream的魔力消耗"
                                 data-content="技能點需求：2">
                                 <img src="../data/images/skill_2.png">
-                                <p style="color: #FFAA00;">Provoke</p>
+                                <p class="stroke" style="color: #FFAA00;">Provoke</p>
                             </td>
                             <td><img src="../data/images/branch/8.png"></td>
                         </tr>
