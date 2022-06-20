@@ -1,0 +1,47 @@
+War Scream (X) 1
+Emit a terrorizing roar that deals damage, pull nearby enemies, and add damage resistance to yourself and allies
+
+Earth Mastery (R) 1
+Increase you base damage from all Earth attacks
+
+Thunder Mastery (R) 1
+Increase you base damage from all Thunder attacks
+
+Air Mastery (Y) 1
+Increase you base damage from all Air attacks
+
+Fire Mastery (B) 1
+Increase you base damage from all Fire attacks
+
+Water Mastery (Y) 1
+Increase you base damage from all Water attacks
+
+Quadruple Bash (R) 2
+Bash will hit 4 times at an even farther range
+
+Fireworks (R) 2
+Mobs hit by Uppercut will explode mid-air and receive additional damage
+
+Flyby Jab (X) 2
+Damage enemies in your way when using Charge
+
+Flaming Uppercut (B) 2
+Uppercut will light mobs on fire dealing damage every 0.6 seconds
+
+Half-Moon Swipe (Y) 2 (Y1)
+Uppercut will deal a footsweep attack at a longer and wider angle. All elemental conversions become Water.
+
+Generalist (Y) 2 (Y3)
+After casting 3 different spells in row, your next spell will cost 5 Mana
+
+Counter (Y) 2
+When dodging a nearby enemy attack, get 30% change to instantly attack back
+
+Mantle of the Bovemists (B) 2 (B3)
+When casting War Scream, create a holy shield around you that reduces all incoming damage by 70% for 3 hits. (20s Cooldown)
+
+Bak'al's Grasp (R) 2 (R2)
+After casting War Scream, become Corrupted. (15s Cooldown)
+You cannot heal while in that state.
+while Corrupted, every 2% of health you lose will add +4 Raw Damage to your attacks. (Max 120)
+
