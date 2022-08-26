@@ -1,0 +1,38 @@
+:root {
+  --CompRed: rgb(255, 66, 66);
+  --CompOrange: rgb(222, 144, 64);
+  --CompBlue: rgb(114, 114, 255);
+  --CompMiddle: rgb(255, 125, 222);
+
+  --IndexColor: var(--CompOrange);
+  --VersionFourColor: var(--CompRed);
+  --ReimaginedColor: var(--CompBlue);
+
+  --ThemeColor: var(--IndexColor);
+
+  --VeryDarkGray: rgb(40, 40, 42);
+  --DarkGray: rgb(68, 68, 72);
+  --VeryLightGray: rgb(254, 254, 254);
+  --LinkColor: rgb(100, 200, 255);
+  --ScreenshotOverlayColor: rgba(0, 0, 0, 0);
+}
+
+:root {
+  /* MC Colors */
+  --mcBlack: #000;
+  --mcDarkBlue: #00a;
+  --mcDarkGreen: #0a0;
+  --mcDarkAqua: #0aa;
+  --mcDarkRed: #a00;
+  --mcDarkPurple: #a0a;
+  --mcGold: #fa0;
+  --mcGray: #aaa;
+  --mcDarkGray: #555;
+  --mcBlue: #55f;
+  --mcGreen: #5f5;
+  --mcAqua: #5ff;
+  --mcRed: #f55;
+  --mcLightPurple: #f5f;
+  --mcYellow: #ff5;
+  --mcWhite: #fff;
+}

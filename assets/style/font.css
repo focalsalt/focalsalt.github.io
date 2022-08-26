@@ -1,0 +1,27 @@
+/* Fonts */
+@font-face {
+  font-family: "minecraftten";
+  src: url(/assets/fonts/MinecraftTen/MinecraftTen.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "minecraftchmc";
+  src: url(../fonts/Minecraftchmc/Minecraftchmc.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "rubiklight_italic";
+  src: url(../fonts/Rubik/Rubik-LightItalic.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "rubiklight";
+  src: url(../fonts/Rubik/Rubik-Light.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
