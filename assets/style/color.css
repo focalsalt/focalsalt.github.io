@@ -5,9 +5,6 @@
   --CompMiddle: rgb(255, 125, 222);
 
   --IndexColor: var(--CompOrange);
-  --VersionFourColor: var(--CompRed);
-  --ReimaginedColor: var(--CompBlue);
-
   --ThemeColor: var(--IndexColor);
 
   --VeryDarkGray: rgb(40, 40, 42);
