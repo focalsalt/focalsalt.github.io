@@ -1,6 +1,35 @@
 @import url(/assets/style/color.css);
 @import url(/assets/style/font.css);
 
+/* SCROLLBAR
+================================================== */
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: var(--DarkGray);
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+::-webkit-scrollbar-track-piece {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgb(170, 170, 170);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  border-radius: 4px;
+  background-color: rgb(120, 120, 120);
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: transparent;
+}
+
 /* CUSTOM RESETS
 ================================================== */
 a {
