@@ -4,8 +4,8 @@
 /* SCROLLBAR
 ================================================== */
 ::-webkit-scrollbar {
-  width: 10px;
-  background-color: var(--DarkGray);
+  width: 12px;
+  background-color: var(--VeryDarkGray);
 }
 
 ::-webkit-scrollbar-button {
@@ -17,13 +17,13 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  border-radius: 4px;
+  border-radius: 50px;
+  border: 2px solid var(--VeryDarkGray);
   background-color: rgb(170, 170, 170);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  border-radius: 4px;
-  background-color: rgb(120, 120, 120);
+  background-color: rgb(130, 130, 130);
 }
 
 ::-webkit-scrollbar-track {
@@ -627,6 +627,7 @@ body {
   font-family: "rubiklight", sans-serif;
   /*font-family: 'minecraftchmc';*/
   color: var(--VeryLightGray);
+  background-color: var(--DarkGray);
 
   font-size: 1em;
 }
@@ -832,16 +833,14 @@ body {
   border-radius: 10px;
 }
 
-.index-reimagined {
+.index-left {
   float: left;
   max-width: 50%;
-  background: url(../img/reimage.jpg) no-repeat top / cover;
 }
 
-.index-v4 {
+.index-right {
   float: right;
   max-width: 50%;
-  background: url(../img/v4image.jpg) no-repeat top / cover;
 }
 
 .index-shader h2 {
@@ -903,6 +902,14 @@ body {
   margin: 0;
   color: var(--VeryLightGray);
   font-size: 40px;
+}
+
+.banner-text h3 {
+  font-family: "minecraftchmc";
+  position: relative;
+  margin: 0;
+  color: var(--VeryLightGray);
+  font-size: 30px;
 }
 
 .banner-text p {
@@ -967,31 +974,6 @@ body {
 
 .subpage-banner a:hover {
   color: var(--ThemeColor);
-}
-
-.reimagined-banner {
-  background: url(../img/reimage.jpg) no-repeat center / cover;
-}
-
-.shaders-v4-banner {
-  background: url(../img/v4image.jpg) no-repeat center / cover;
-}
-
-.portfolio-banner {
-  background: url(../img/portfolio-banner.jpg) no-repeat center / cover;
-}
-
-.blog-banner {
-  background: url(../img/blog-banner.jpg) no-repeat center / cover;
-}
-
-.contact-banner {
-  background: url(../img/v4screenshots/MountainsNearOcean.jpg) no-repeat center /
-    cover;
-}
-
-.mod-issues-banner {
-  background: url(../img/Taiga.jpg) no-repeat center / cover;
 }
 
 .overlayer {
@@ -1088,6 +1070,62 @@ table.work p {
   padding: 0 20px;
   font-size: 16px;
   color: var(--mcGray);
+}
+
+table.skilltree {
+  width: 704px;
+  border: 0px solid transparent;
+}
+
+table.skilltree thead {
+  background: url(/assets/images/ability/thead.png) no-repeat top;
+  height: 95px;
+}
+
+table.skilltree tbody {
+  background: url(/assets/images/ability/tbody.png) top;
+}
+
+table.skilltree tfoot {
+  background: url(/assets/images/ability/tfoot.png) no-repeat top;
+  height: 91px;
+}
+
+table.skilltree tr td {
+  padding: 0;
+  margin: 0;
+  width: 64px;
+  height: 64px;
+  border: 0px solid transparent;
+  text-align: center;
+}
+
+table.skilltree .skill_0 {
+  background: url(/assets/images/ability/0.png);
+}
+table.skilltree .skill_1 {
+  background: url(/assets/images/ability/1.png);
+}
+table.skilltree .skill_2 {
+  background: url(/assets/images/ability/2.png);
+}
+table.skilltree .skill_3 {
+  background: url(/assets/images/ability/3.png);
+}
+table.skilltree .skill_4 {
+  background: url(/assets/images/ability/4.png);
+}
+table.skilltree .skill_5 {
+  background: url(/assets/images/ability/5.png);
+}
+table.skilltree .skill_6 {
+  background: url(/assets/images/ability/6.png);
+}
+table.skilltree .skill_7 {
+  background: url(/assets/images/ability/7.png);
+}
+table.skilltree .skill_8 {
+  background: url(/assets/images/ability/8.png);
 }
 
 /* site-section */

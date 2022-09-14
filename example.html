@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-tw">
+<html lang="zh-Hant-TW" dark system-icons typography typography-spacing>
   <head>
     <!--Basic page needs-->
     <meta charset="UTF-8" />
@@ -61,10 +61,10 @@
                 <a data-toggle="dropdown">Home</a>
               </li>
               <li>
-                <a>Works</a>
+                <a href="/project.html">Project</a>
               </li>
-              <li class="disabled">
-                <a>???</a>
+              <li>
+                <a href="/wynn/skilltree.html">Skill Tree</a>
               </li>
               <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown">
@@ -73,10 +73,10 @@
                 </a>
                 <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
                   <li>
-                    <a>Youtube</a>
+                    <a href="https://www.youtube.com/c/focalsalt">Youtube</a>
                   </li>
                   <li>
-                    <a>Twitch</a>
+                    <a href="https://www.twitch.tv/focalsalt">Twitch</a>
                   </li>
                 </ul>
               </li>
@@ -89,7 +89,7 @@
           aria-haspopup="true"
           role="button"
           tabindex="0"
-          class="slicknav-btn slicknav_collapsed"
+          class="slicknav_btn slicknav_collapsed"
           style="outline: none"
         >
           <span class="slicknav_menutxt"></span>
@@ -109,10 +109,12 @@
             <a data-toggle="dropdown" role="menuitem" tabindex="-1">Home</a>
           </li>
           <li>
-            <a role="menuitem" tabindex="-1">Works</a>
+            <a href="project.html" role="menuitem" tabindex="-1">Project</a>
           </li>
-          <li class="disabled">
-            <a role="menuitem" tabindex="-1">???</a>
+          <li>
+            <a href="/wynn/skilltree.html" role="menuitem" tabindex="-1"
+              >Skill Tree</a
+            >
           </li>
           <li class="dropdown slicknav_collapsed slicknav_parent">
             <a data-toggle="dropdown" role="menuitem" tabindex="-1"
@@ -126,10 +128,20 @@
               style="display: none"
             >
               <li>
-                <a role="menuitem" tabindex="-1">Youtube</a>
+                <a
+                  href="https://www.youtube.com/c/focalsalt"
+                  role="menuitem"
+                  tabindex="-1"
+                  >Youtube</a
+                >
               </li>
               <li>
-                <a role="menuitem" tabindex="-1">Twitch</a>
+                <a
+                  href="https://www.twitch.tv/focalsalt"
+                  role="menuitem"
+                  tabindex="-1"
+                  >Twitch</a
+                >
               </li>
             </ul>
           </li>
@@ -139,7 +151,7 @@
     <div
       id="banner"
       class="banner overlay subpage-banner"
-      style="background: url(assets/images/banner.png) no-repeat top / cover"
+      style="background: url(/assets/images/banner.png) no-repeat top / cover"
     >
       <div class="banner-content">
         <div
@@ -153,11 +165,7 @@
     </div>
     <!--Content-->
     <main id="main" class="site-main">
-      <section class="site-section section-features">
-        <div class="container">
-          <div class="row"></div>
-        </div>
-      </section>
+      <section class="site-section section-features"></section>
     </main>
     <!--Footer-->
     <footer id="colphon" class="site-footer">
