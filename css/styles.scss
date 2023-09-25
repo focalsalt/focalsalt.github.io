@@ -84,6 +84,7 @@ a {
 .content {
   display:flex;
   font-size: larger;
+  line-height: 40px;
   background-color: var(--mainc3);
   .button {
     border: 5px var(--mainc6) solid;
