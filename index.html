@@ -1,37 +1,75 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./assets/css/base.css" />
-    <title>Focal Space</title>
+    <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Focal's Space - Home</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.css" rel="stylesheet">
+	  <link rel="stylesheet/less" type="text/css" href="css/styles.scss">
   </head>
   <body>
-    <nav class="navbar">
-      <div class="navbar-overlay" onclick="toggleMenuOpen()"></div>
-
-      <button type="button" class="navbar-burger" onclick="toggleMenuOpen()">
-        <span class="material-icons">menu</span>
-      </button>
-
-      <h1 class="navbar-title">Focal Space</h1>
-
-      <nav class="navbar-menu">
-        <button type="button" class="active">Home</button>
-        <button type="button">Project</button>
-        <button type="button">About</button>
+    <section class="header">
+      <nav class="navbar navbar-expand-sm">
+        <div class="container-fluid">
+          <a class="navbar-brand">
+            <img src="assets/image/logo.jpg" class="logo">  Focal's Space
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+            <ul class="navbar-nav text-center">
+              <li class="nav-item">
+                <a class="nav-link active">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Project</a>
+                <ul class="dropdown-menu text-center">
+                  <li><h5 class="dropdown-header">Resource Pack</h5></li>
+                  <li><a class="dropdown-item" href="page/download/000001.html">Undertale's UI</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Infomation</a>
+                <ul class="dropdown-menu text-center">
+                  <li><a class="dropdown-item" href="#">Contect</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
-    </nav>
+      <div class="container-fluid title text-center">
+        <img src="assets/image/home.png" height="100px">
+      </div>
+    </section>    
 
-    <iframe id="ytplayer" type="text/html" width="640" height="360"
-  src="https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=http://example.com"
-  frameborder="0"></iframe>
-    
-    <script src="./assets/js/navbar.js"></script>
+    <section class="content">
+      <div class="container-sm text-center">
+        <br><h3>Welcome to Focal's Space</h3>
+        <hr><p>I will put some works in here.</p>
+        <p>You can also check out my youtude channel >> <a class="button" href="https://www.youtube.com/@FocalSalt">Go to YT Channel</a></p>
+        <p>enjoy <3</p>
+        <br><br><br>
+        <br><br><br>
+        <br><br><br>
+        <br><br><br>
+        <br><br><br>
+        <br><br><br>
+      </div>
+    </section>
+      
+    <section class="footer">
+      <div class="container-sm text-center">
+        <p>copyright&copy; FocalSalt</p>
+      </div>
+    </section>
+
+    <script src="js/dropdown-slide.js"></script>
+    <!-- SCSS Compiler -->
+	  <script src="https://cdn.jsdelivr.net/npm/less@4.1.1"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.js"></script>
   </body>
 </html>

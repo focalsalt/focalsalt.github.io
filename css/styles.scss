@@ -1,0 +1,99 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&family=Rubik&display=swap');
+
+:root {
+  /* Main Color Group */
+  --mainc1: #3A081C;
+  --mainc2: #64111F;
+  --mainc3: #8D211C;
+  --mainc4: #B35029;
+  --mainc5: #CE8A40;
+  --mainc6: #D5BB6D;
+  --mainc7: #DDDC97;
+  --mainc8: #DFE8BF;
+  /* Text Color Group */
+  --textc1: #0E0209;
+  --textc2: #EEF5E5;
+}
+
+html, body {
+  background-color: var(--mainc2);
+  color: var(--textc2);
+  font-family: "Rubik", "Noto Sans TC";
+}
+
+a {
+  transition: all 0.25s ease-in-out !important;
+  color: var(--textc2) !important;
+  text-decoration: none;
+  &:hover {
+    color: var(--mainc5) !important;
+    text-shadow: 
+      2px 0 var(--textc1), -2px 0 var(--textc1), 
+      0 2px var(--textc1), 0 -2px var(--textc1), 
+      1px 1px var(--textc1), -1px -1px var(--textc1), 
+      1px -1px var(--textc1), -1px 1px var(--textc1);
+    cursor: pointer;
+  }
+}
+
+.header {
+  background-image: url(../assets/image/light.png);
+  background-attachment: fixed;
+  background-size: cover;
+  .navbar {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    .logo {
+      width: 40px;
+      border-radius: 50%;
+    }
+    .navbar-nav {
+      .active {
+        color: var(--mainc5) !important;
+        text-shadow: 
+          2px 0 var(--textc1), -2px 0 var(--textc1), 
+          0 2px var(--textc1), 0 -2px var(--textc1), 
+          1px 1px var(--textc1), -1px -1px var(--textc1), 
+          1px -1px var(--textc1), -1px 1px var(--textc1);
+      }
+      .disabled {
+        color: var(--mainc2) !important;
+      }
+      .dropdown-menu {
+        background-color: rgba(0, 0, 0, 0.25);
+        .dropdown-header {
+          color: var(--textc2);
+        }
+        .active {
+          background-color: rgba(0, 0, 0, 0) !important;
+        }
+        :hover {
+          background-color: rgba(0, 0, 0, 0) !important;
+        }
+      }
+    }
+    .navbar-toggler {
+      background-color: var(--mainc5);
+    }
+  }
+  .title {
+    padding: 10rem 0 !important;
+  }
+}
+
+.content {
+  display:flex;
+  font-size: larger;
+  background-color: var(--mainc3);
+  .button {
+    border: 5px var(--mainc6) solid;
+    border-radius: 10px;
+    padding: 5px 10px;
+    &:hover {
+      color: var(--textc1) !important;
+      background-color: var(--mainc6);
+      text-shadow: none !important;
+      cursor: pointer;
+    }
+  }
+}
