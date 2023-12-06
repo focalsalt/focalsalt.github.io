@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Focal's Space</title>
-        <base href="https://focalsalt.github.io/" />
+        <!-- <base href="https://focalsalt.github.io/" /> -->
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -23,25 +23,26 @@
                 <p>&nbsp;&nbsp;Focal's Space</p>
             </div>
             <div class="nav">
-                <!-- <a onclick="clickHome()" class="active">Home</a> -->
-                <a href="/index.html">Home</a>
+                <a class="item" href="/index.html">Home</a>
                 <div class="dropdown">
-                    <button class="link dropbtn" onclick="dropdown()">
+                    <button class="item dropdown-button" onclick="dropdown()">
                         Project
                     </button>
                     <div class="dropdown-content" id="Dropdown">
-                        <p>Server</p>
-                        <!-- <a onclick="clickVoidland()" href="#Voidland"> -->
-                        <a href="/pages/voidland.html">Voidland</a>
-                        <p>Resource Pack</p>
-                        <a class="active">Undertale UI</a>
+                        <p class="dropdown-item">Server</p>
+                        <a
+                            class="dropdown-item link"
+                            href="/pages/voidland.html"
+                            >Voidland</a
+                        >
+                        <p class="dropdown-item">Resource Pack</p>
+                        <a class="dropdown-item link active">Undertale UI</a>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- <div id="content"></div> -->
-        <div class="main-home"><img src="/data/image/undertale-ui.png" /></div>
-        <div class="space"></div>
+        <div class="title-main"><img src="/data/image/undertale-ui.png" /></div>
+        <div class="small-space"></div>
         <div class="content">
             <h3>Pack Status: Remaking...</h3>
             <div class="progress-bar">
@@ -53,17 +54,17 @@
             </p>
             <p>I recommend play those if you haven't played it before.</p>
             <p>You can click those button to play.</p>
-            <a>Go to Undertale</a>
-            <a>Go to Deltarune</a>
-            <a>Go to Undertale Arena</a>
-            <a>Download Undertale UI</a>
+            <a class="link-button">Go to Undertale</a>
+            <a class="link-button">Go to Deltarune</a>
+            <a class="link-button">Go to Undertale Arena</a>
+            <hr />
+            <a class="link-button">Download Undertale UI</a>
             <p>[Work In Program]</p>
         </div>
-        <div class="space-end"></div>
+        <div class="big-space"></div>
         <div class="footer">
             <p>copyright© FocalSalt</p>
         </div>
         <script src="/data/js/dropdown.js"></script>
-        <!-- <script src="./data/js/switchPage.js"></script> -->
     </body>
 </html>
