@@ -1,0 +1,13 @@
+<script>
+  navigator.geolocation.getCurrentPosition(
+    (pos) => { 
+      // 成功：跳回捷徑並帶參數 result=ON
+      window.location.href = "shortcuts://x-callback-url/run-shortcut?name=是否關閉定位服務&input=text&text=定位服務開啟";
+    },
+    (err) => { 
+      // 失敗：跳回捷徑並帶參數 result=OFF
+      window.location.href = "shortcuts://x-callback-url/run-shortcut?name=是否關閉定位服務&input=text&text=定位服務關閉";
+    },
+    { timeout: 2000 }
+  );
+</script>
