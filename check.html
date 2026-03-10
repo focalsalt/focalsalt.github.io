@@ -1,0 +1,7 @@
+<div id="status">PENDING</div>
+<script>
+  navigator.geolocation.getCurrentPosition(
+    () => { document.getElementById('status').innerHTML = 'GPS_ON'; },
+    () => { document.getElementById('status').innerHTML = 'GPS_OFF'; }
+  );
+</script>
