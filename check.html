@@ -2,11 +2,11 @@
   navigator.geolocation.getCurrentPosition(
     (pos) => { 
       // 成功：跳回捷徑並帶參數 result=ON
-      window.location.href = "shortcuts://x-callback-url/run-shortcut?name=你的捷徑名稱&input=text&text=GPS_ON";
+      window.location.href = "shortcuts://x-callback-url/run-shortcut?name=是否開啟定位服務&input=text&text=GPS_ON";
     },
     (err) => { 
       // 失敗：跳回捷徑並帶參數 result=OFF
-      window.location.href = "shortcuts://x-callback-url/run-shortcut?name=你的捷徑名稱&input=text&text=GPS_OFF";
+      window.location.href = "shortcuts://x-callback-url/run-shortcut?name=是否開啟定位服務&input=text&text=GPS_OFF";
     },
     { timeout: 2000 }
   );
