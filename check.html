@@ -1,7 +1,9 @@
-<div id="status">PENDING</div>
+<title id="res">DETECTING</title>
 <script>
+  // 縮短逾時設定，強迫 1 秒內沒反應就回傳 OFF
   navigator.geolocation.getCurrentPosition(
-    () => { document.getElementById('status').innerHTML = 'GPS_ON'; },
-    () => { document.getElementById('status').innerHTML = 'GPS_OFF'; }
+    () => { document.title = 'GPS_ON'; },
+    () => { document.title = 'GPS_OFF'; },
+    { timeout: 1000 }
   );
 </script>
