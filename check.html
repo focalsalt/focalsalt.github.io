@@ -1,9 +1,10 @@
-<title id="res">DETECTING</title>
-<script>
-  // 縮短逾時設定，強迫 1 秒內沒反應就回傳 OFF
-  navigator.geolocation.getCurrentPosition(
-    () => { document.title = 'GPS_ON'; },
-    () => { document.title = 'GPS_OFF'; },
-    { timeout: 1000 }
-  );
-</script>
+<body>
+  <div id="out">DETECTING...</div>
+  <script>
+    navigator.geolocation.getCurrentPosition(
+      () => { document.getElementById('out').innerText = "RESULT_ON"; },
+      () => { document.getElementById('out').innerText = "RESULT_OFF"; },
+      { timeout: 2000 }
+    );
+  </script>
+</body>
