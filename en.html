@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -15,30 +15,30 @@
       }
       
       const preferredLang = localStorage.getItem('preferred-lang');
-      if (preferredLang === 'en') {
-        window.location.replace('en.html');
+      if (preferredLang === 'zh') {
+        window.location.replace('index.html');
       } else if (!preferredLang) {
         const userLang = navigator.language || navigator.userLanguage;
-        if (userLang && !userLang.toLowerCase().startsWith('zh')) {
-          localStorage.setItem('preferred-lang', 'en');
-          window.location.replace('en.html');
-        } else {
+        if (userLang && userLang.toLowerCase().startsWith('zh')) {
           localStorage.setItem('preferred-lang', 'zh');
+          window.location.replace('index.html');
+        } else {
+          localStorage.setItem('preferred-lang', 'en');
         }
       }
     })();
   </script>
 
   <!-- SEO Tags -->
-  <title>FocalCraft Launcher - 重新定義你的 Minecraft 遊戲管理體驗</title>
+  <title>FocalCraft Launcher - Redefining Your Minecraft Game Management Experience</title>
   <meta name="description"
-    content="FocalCraft Launcher 是一款基於 Tauri v2 + Rust 核心與 React + TypeScript 打造的新一代 Minecraft 啟動器。提供極致輕量、雙生態一鍵整合、沙盒化實例管理、本地外觀衣櫃與智慧 Java 託管服務。">
+    content="FocalCraft Launcher is a next-generation Minecraft launcher built with Tauri v2 + Rust and React + TypeScript. It provides extreme lightness, one-click dual ecosystem integration, sandboxed instance management, local wardrobe, and smart Java hosting.">
   <meta name="keywords"
-    content="Minecraft, 麥塊, 啟動器, Minecraft Launcher, Tauri, Rust, Modrinth, CurseForge, MRpack, 遊戲管理">
+    content="Minecraft, Launcher, Minecraft Launcher, Tauri, Rust, Modrinth, CurseForge, MRpack, Game Management">
 
   <!-- Open Graph -->
   <meta property="og:title" content="FocalCraft Launcher">
-  <meta property="og:description" content="輕量、極速、美觀 —— 重新定義你的 Minecraft 遊戲管理體驗。基於 Rust & Tauri v2 的現代化啟動器。">
+  <meta property="og:description" content="Lightweight, fast, beautiful — Redefining your Minecraft game management experience. A modern launcher powered by Rust & Tauri v2.">
   <meta property="og:type" content="website">
 
   <!-- Stylesheets -->
@@ -73,9 +73,9 @@
       </a>
       <nav>
         <ul class="nav-links">
-          <li><a href="#features">特色亮點</a></li>
-          <li><a href="#tech">技術優勢</a></li>
-          <li><a href="#audience">為什麼選擇</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#tech">Architecture</a></li>
+          <li><a href="#audience">Why Us</a></li>
           <li><a href="https://github.com/focalsalt/FocalCraft-Launcher" target="_blank"
               style="display: flex; align-items: center; gap: 0.25rem;">
               <svg style="width: 1.1rem; height: 1.1rem;" viewBox="0 0 24 24" fill="currentColor">
@@ -83,11 +83,11 @@
                   d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.579 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
               </svg> GitHub
             </a></li>
-          <li><a href="en.html" onclick="localStorage.setItem('preferred-lang', 'en')">🌐 EN</a></li>
+          <li><a href="index.html" onclick="localStorage.setItem('preferred-lang', 'zh')">🌐 中文</a></li>
         </ul>
       </nav>
       <a href="#download" class="btn btn-primary"
-        style="padding: 0.5rem 1.1rem; font-size: 0.85rem; border-radius: 6px;">立即下載</a>
+        style="padding: 0.5rem 1.1rem; font-size: 0.85rem; border-radius: 6px;">Download Now</a>
     </div>
   </header>
 
@@ -96,12 +96,12 @@
     <div class="container hero-grid">
       <div class="hero-content reveal-fade-in delay-1">
         <div class="badge">
-          <span class="shimmer-anim">⚡ Tauri v2 & Rust 驅動的新一代啟動器</span>
+          <span class="shimmer-anim">⚡ Next-Gen Launcher Driven by Tauri v2 & Rust</span>
         </div>
         <h1>🌌 FocalCraft<br><span class="text-gradient-green">Launcher</span></h1>
-        <p>「輕量、極速、美觀 —— 重新定義你的 Minecraft 遊戲管理體驗」</p>
+        <p>“Lightweight, Ultra-fast, Beautiful — Redefining your Minecraft experience”</p>
         <p style="font-size: 1rem; color: var(--text-muted); margin-top: -0.5rem;">
-          FocalCraft 採用高效能 Rust 底層，結合 React + TypeScript 現代化前端，告別傳統啟動器的龐大記憶體佔用與卡頓，提供原生級的流暢感。
+          FocalCraft features a high-performance Rust backend combined with a modern React + TypeScript frontend. Say goodbye to the bloated memory usage and lag of traditional launchers, and enjoy native-level smoothness.
         </p>
         <div class="hero-ctas">
           <a href="https://github.com/focalsalt/FocalCraft-Launcher/releases/latest/download/Focal.Craft.Launcher_x64-setup.exe"
@@ -110,9 +110,9 @@
               <path
                 d="M0 3.449L9.75 2.1v9.45H0V3.449zM0 12.45h9.75v9.45L0 20.551v-8.101zM11.25 1.875L24 0v11.55H11.25V1.875zM11.25 12.45H24v11.55l-12.75-1.875V12.45z" />
             </svg>
-            Windows 下載 (EXE)
+            Windows Download (EXE)
           </a>
-          <a href="#features" class="btn btn-secondary">了解特色</a>
+          <a href="#features" class="btn btn-secondary">Explore Features</a>
         </div>
       </div>
 
@@ -137,7 +137,7 @@
                 <div class="mockup-profile-avatar">FS</div>
                 <div class="mockup-profile-info">
                   <span class="mockup-profile-name">FocalSalt</span>
-                  <span class="mockup-profile-status">已連線</span>
+                  <span class="mockup-profile-status">Connected</span>
                 </div>
               </div>
 
@@ -149,7 +149,7 @@
                   <rect x="14" y="12" width="7" height="9" rx="1" />
                   <rect x="3" y="16" width="7" height="5" rx="1" />
                 </svg>
-                <span>實例總覽</span>
+                <span>Instances</span>
               </div>
 
               <div class="mockup-nav-item" onclick="showMockupView('wardrobe', this)">
@@ -161,7 +161,7 @@
                   <line x1="9" y1="12" x2="15" y2="12" />
                   <line x1="12" y1="9" x2="12" y2="15" />
                 </svg>
-                <span>帳號資訊</span>
+                <span>Account Info</span>
               </div>
 
               <!-- Bottom aligned Global Settings -->
@@ -173,7 +173,7 @@
                     <path
                       d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
                   </svg>
-                  <span>全局設定</span>
+                  <span>Global Settings</span>
                 </div>
               </div>
             </div>
@@ -191,9 +191,8 @@
                     </div>
                     <!-- Inner sub-tabs exactly like real detail page -->
                     <div class="mockup-subtabs">
-                      <div class="mockup-subtab active" onclick="showMockupSubTab('mods', this)">模組管理</div>
-                      <div id="mock-subtab-btn-logs" class="mockup-subtab" onclick="showMockupSubTab('logs', this)">運行日誌
-                      </div>
+                      <div class="mockup-subtab active" onclick="showMockupSubTab('mods', this)">Mods Manager</div>
+                      <div id="mock-subtab-btn-logs" class="mockup-subtab" onclick="showMockupSubTab('logs', this)">Live Logs</div>
                     </div>
                   </div>
 
@@ -201,7 +200,7 @@
                     <!-- Sub-pane: Mods management -->
                     <div id="mock-subtab-mods" class="mockup-subtab-pane active">
                       <div class="mockup-store-header">
-                        <input type="text" class="mockup-store-search" placeholder="搜尋並整合 Modrinth / CurseForge 資源..."
+                        <input type="text" class="mockup-store-search" placeholder="Search & integrate Modrinth / CurseForge resources..."
                           value="Sodium">
                         <div class="mockup-store-tabs">
                           <div class="mockup-store-tab active">Modrinth</div>
@@ -212,37 +211,37 @@
                           <div class="mockup-store-img"
                             style="color: #4ee05d; background: rgba(78, 224, 93, 0.1); font-size: 0.65rem;">Na</div>
                           <div class="mockup-store-info">
-                            <div class="mockup-store-name">Sodium (鈉)</div>
-                            <div class="mockup-store-desc">極致優化 / 提升幀率</div>
+                            <div class="mockup-store-name">Sodium</div>
+                            <div class="mockup-store-desc">Extreme optimization / Boost FPS</div>
                           </div>
-                          <div class="mockup-store-dl" onclick="alert('模擬：Sodium 已下載至 Sandbox 實例！')">安裝</div>
+                          <div class="mockup-store-dl" onclick="alert('Simulation: Sodium downloaded to sandbox instance!')">Install</div>
                         </div>
                         <div class="mockup-store-card">
                           <div class="mockup-store-img"
                             style="color: #00bcd4; background: rgba(0, 188, 212, 0.1); font-size: 0.65rem;">Ir</div>
                           <div class="mockup-store-info">
                             <div class="mockup-store-name">Iris Shaders</div>
-                            <div class="mockup-store-desc">高效能光影載入器</div>
+                            <div class="mockup-store-desc">High-performance shaders loader</div>
                           </div>
-                          <div class="mockup-store-dl" onclick="alert('模擬：Iris Shaders 已安裝完成！')">安裝</div>
+                          <div class="mockup-store-dl" onclick="alert('Simulation: Iris Shaders installed successfully!')">Install</div>
                         </div>
                         <div class="mockup-store-card">
                           <div class="mockup-store-img"
                             style="color: #ff9800; background: rgba(255, 152, 0, 0.1); font-size: 0.65rem;">Ph</div>
                           <div class="mockup-store-info">
                             <div class="mockup-store-name">Physics Mod</div>
-                            <div class="mockup-store-desc">逼真重力與布料物理</div>
+                            <div class="mockup-store-desc">Realistic gravity & ragdoll physics</div>
                           </div>
-                          <div class="mockup-store-dl" onclick="alert('模擬：Physics Mod 下載中...')">下載</div>
+                          <div class="mockup-store-dl" onclick="alert('Simulation: Physics Mod downloading...')">Download</div>
                         </div>
                         <div class="mockup-store-card">
                           <div class="mockup-store-img"
                             style="color: #9c27b0; background: rgba(156, 39, 176, 0.1); font-size: 0.65rem;">Es</div>
                           <div class="mockup-store-info">
                             <div class="mockup-store-name">Essential Mod</div>
-                            <div class="mockup-store-desc">快捷聯機與外觀包</div>
+                            <div class="mockup-store-desc">Easy multiplayer & cosmetics</div>
                           </div>
-                          <div class="mockup-store-dl" onclick="alert('模擬：Essential Mod 已成功導入！')">安裝</div>
+                          <div class="mockup-store-dl" onclick="alert('Simulation: Essential Mod imported successfully!')">Install</div>
                         </div>
                       </div>
                     </div>
@@ -277,7 +276,7 @@
                     </span>
                     <span style="color: #666; font-size: 0.6rem;">▼</span>
                   </div>
-                  <div class="mockup-play-btn" onclick="simulateLaunch()">啟動遊戲</div>
+                  <div class="mockup-play-btn" onclick="simulateLaunch()">Launch Game</div>
                 </div>
               </div>
 
@@ -331,11 +330,11 @@
                         <rect x="8" y="30" width="4" height="2" fill="#382210" />
                       </svg>
                     </div>
-                    <div id="mockup-skin-name" class="mockup-skin-info">Steve (經典)</div>
+                    <div id="mockup-skin-name" class="mockup-skin-info">Steve (Classic)</div>
                   </div>
 
                   <div class="mockup-wardrobe-list">
-                    <div class="mockup-wardrobe-title">外觀衣櫃 (本地收藏)</div>
+                    <div class="mockup-wardrobe-title">Wardrobe (Local Skins)</div>
                     <div class="mockup-skin-items">
                       <div class="mockup-skin-card active" onclick="changeMockSkin('steve')">
                         <div class="mockup-skin-avatar" style="background: #c4977a; border-radius: 2px;"></div>
@@ -349,10 +348,10 @@
                     <div style="display: flex; gap: 0.3rem; margin-top: 0.4rem;">
                       <button class="btn btn-primary"
                         style="flex: 1; padding: 0.25rem; font-size: 0.55rem; border-radius: 3px;"
-                        onclick="alert('模擬：已同步上傳至官方伺服器！')">上傳至官方</button>
+                        onclick="alert('Simulation: Synced and uploaded to official Mojang servers!')">Upload to Mojang</button>
                       <button class="btn btn-secondary"
                         style="flex: 1; padding: 0.25rem; font-size: 0.55rem; border-radius: 3px;"
-                        onclick="alert('模擬：披風切換成功！')">切換披風</button>
+                        onclick="alert('Simulation: Cape switched successfully!')">Switch Cape</button>
                     </div>
                   </div>
                 </div>
@@ -361,22 +360,22 @@
               <!-- VIEW: Global Settings -->
               <div id="mock-view-settings" class="mockup-view">
                 <div class="mockup-settings-panel">
-                  <div class="mockup-settings-title">全局設定</div>
+                  <div class="mockup-settings-title">Global Settings</div>
                   <div class="mockup-settings-item">
-                    <div class="mockup-settings-label">Java 執行環境</div>
-                    <div class="mockup-settings-value">自動偵測並下載 (OpenJDK 17)</div>
+                    <div class="mockup-settings-label">Java Runtime</div>
+                    <div class="mockup-settings-value">Auto-detect & download (OpenJDK 17)</div>
                   </div>
                   <div class="mockup-settings-item">
-                    <div class="mockup-settings-label">最大分配記憶體</div>
+                    <div class="mockup-settings-label">Max Allocated RAM</div>
                     <div class="mockup-settings-value">4096 MB</div>
                   </div>
                   <div class="mockup-settings-item">
-                    <div class="mockup-settings-label">獨立實例沙盒化</div>
-                    <div class="mockup-settings-value">已開啟 (完全隔離儲存)</div>
+                    <div class="mockup-settings-label">Sandboxed Instance</div>
+                    <div class="mockup-settings-value">Enabled (Fully isolated storage)</div>
                   </div>
                   <div class="mockup-settings-item">
-                    <div class="mockup-settings-label">版本更新通道</div>
-                    <div class="mockup-settings-value">穩定版 (Release v2.0)</div>
+                    <div class="mockup-settings-label">Update Channel</div>
+                    <div class="mockup-settings-value">Stable (Release v2.0)</div>
                   </div>
                 </div>
               </div>
@@ -393,8 +392,8 @@
     <div class="container">
       <div class="section-header reveal-fade-in">
         <div class="badge">FEATURES</div>
-        <h2>✨ 核心特色亮點</h2>
-        <p>為玩家量身打造的極致體驗，擺脫傳統啟動器的繁重與繁瑣配置</p>
+        <h2>✨ Core Features</h2>
+        <p>An experience tailored for players, free from bloated software and complex manual configuration.</p>
       </div>
 
       <div class="features-grid">
@@ -406,11 +405,11 @@
               <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
             </svg>
           </div>
-          <h3>⚡ 1. 極致輕量，釋放每一兆記憶體</h3>
-          <p>告別傳統啟動器動輒數百 MB 的記憶體佔用。將資源留給最重要的遊戲本體。</p>
+          <h3>⚡ Extremely Lightweight, Free Every Megabyte of RAM</h3>
+          <p>Say goodbye to traditional launchers that consume hundreds of MBs of memory. Keep resources for what matters most: the game itself.</p>
           <ul class="feature-list">
-            <li><strong>Rust 核心驅動</strong>：採用 Tauri v2 渲染架構，體積極小，瞬息啟動。</li>
-            <li><strong>原生級流暢</strong>：極低背景資源消耗，保證遊戲幀率（FPS）最大化。</li>
+            <li><strong>Rust Backend</strong>: Built on Tauri v2 rendering framework, extremely small footprint, launches in a flash.</li>
+            <li><strong>Native Smoothness</strong>: Low background resource usage, ensuring maximum game FPS.</li>
           </ul>
         </div>
 
@@ -425,11 +424,11 @@
               <path d="M18 10h4" />
             </svg>
           </div>
-          <h3>🔌 2. 雙生態圈一鍵整合</h3>
-          <p>整合 Modrinth 和 CurseForge 兩大主流生態。再也不需要手動開瀏覽器下載模組。</p>
+          <h3>🔌 Dual-Ecosystem One-Click Integration</h3>
+          <p>Integrates the two major platforms: Modrinth and CurseForge. No more opening browsers to download mods.</p>
           <ul class="feature-list">
-            <li><strong>內置一鍵搜尋下載</strong>：直接搜尋並安裝 Mod、光影、資源包及地圖。</li>
-            <li><strong>完整相容 .mrpack</strong>：支援一鍵匯入 Modrinth 標準包，自動下載所有相依。</li>
+            <li><strong>Built-in Search & Install</strong>: Directly search and install mods, shaders, resource packs, and worlds.</li>
+            <li><strong>Full .mrpack Support</strong>: Supports one-click import of Modrinth modpacks with auto-resolving dependencies.</li>
           </ul>
         </div>
 
@@ -444,12 +443,12 @@
               <line x1="6" y1="18" x2="6.01" y2="18" />
             </svg>
           </div>
-          <h3>🗃️ 3. 深度實例沙盒化管理</h3>
-          <p>每一個遊戲版本與實例完全隔離。避免因為模組混亂導致的版本衝突。</p>
+          <h3>🗃️ Sandboxed Instance Management</h3>
+          <p>Each game version and instance is completely isolated, avoiding version conflicts caused by mod clutter.</p>
           <ul class="feature-list">
-            <li><strong>完全獨立沙盒</strong>：Mod、光影、存檔及伺服器列表（內建編輯器）互不干擾。</li>
-            <li><strong>極客設定檔</strong>：單獨配置 Java 路徑、記憶體大小、JVM 參數與自訂圖示。</li>
-            <li><strong>資料夾即時監控</strong>：手動拖入檔案時，啟動器界面將即時檢測並刷新。</li>
+            <li><strong>Independent Sandboxes</strong>: Mods, shaders, saves, and server lists (with built-in editor) never interfere.</li>
+            <li><strong>Geek-level Configs</strong>: Customize Java paths, memory allocation, JVM arguments, and custom icons per instance.</li>
+            <li><strong>Live Folder Monitoring</strong>: Launcher interface automatically detects and refreshes when files are dragged in.</li>
           </ul>
         </div>
 
@@ -463,12 +462,12 @@
               <polyline points="17 11 19 13 23 9" />
             </svg>
           </div>
-          <h3>👕 4. 隨心所欲的「外觀衣櫃」</h3>
-          <p>完美的皮膚管理模組，提供本地皮膚存檔與一鍵官方同步。</p>
+          <h3>👕 Flexible "Skin Wardrobe"</h3>
+          <p>Perfect skin management module, providing local skin storage and one-click sync to Mojang.</p>
           <ul class="feature-list">
-            <li><strong>微軟 OAuth 登入</strong>：採用官方安全裝置碼協定，安全登入並支援離線模式。</li>
-            <li><strong>本地外觀衣櫃</strong>：收藏無限數量皮膚（Classic / Slim），一鍵上傳至官方。</li>
-            <li><strong>披風快速切換</strong>：快捷管理與更換 Mojang 官方披風。</li>
+            <li><strong>Microsoft OAuth Login</strong>: Uses official secure device code flow, supports offline mode.</li>
+            <li><strong>Local Wardrobe</strong>: Collect unlimited skins (Classic / Slim) and upload to Mojang servers in one click.</li>
+            <li><strong>Cape Fast Switching</strong>: Easily manage and switch Mojang official capes.</li>
           </ul>
         </div>
 
@@ -481,11 +480,11 @@
                 d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
             </svg>
           </div>
-          <h3>🛠️ 5. 智慧 Java 環境託管</h3>
-          <p>徹底告別因 Java 版本不符導致的「無法啟動遊戲」錯誤。</p>
+          <h3>🛠️ Smart Java Environment Hosting</h3>
+          <p>Say goodbye to "Game crash on launch" due to mismatched Java versions.</p>
           <ul class="feature-list">
-            <li><strong>精準版本配對</strong>：自動檢測當前 Minecraft 實例所需的最佳 Java 版本。</li>
-            <li><strong>一鍵靜默下載</strong>：如本機缺少對應 Java，軟體會自動下載並配置，無需手動干預。</li>
+            <li><strong>Precise Version Matching</strong>: Automatically detects the best Java version required for the instance.</li>
+            <li><strong>One-click Silent Download</strong>: Automatically downloads and configures Java if missing, no manual setup needed.</li>
           </ul>
         </div>
 
@@ -499,11 +498,11 @@
               <line x1="6" y1="20" x2="6" y2="14" />
             </svg>
           </div>
-          <h3>📊 6. 即時主控台與崩潰防護</h3>
-          <p>精心設計的日誌與進度模組，讓遊戲運行過程透明化。</p>
+          <h3>📊 Live Console & Crash Protection</h3>
+          <p>Meticulously designed log and progress modules, making the game execution transparent.</p>
           <ul class="feature-list">
-            <li><strong>啟動進度 HUD</strong>：精美的 HUD 進度條與狀態顯示，清晰掌控載入環節。</li>
-            <li><strong>Live Logs 主控台</strong>：即時串流遊戲輸出日誌，讓 Mod 衝突與崩潰原因無所遁形。</li>
+            <li><strong>Launch HUD</strong>: Beautiful progress bar and status HUD to show loading stages clearly.</li>
+            <li><strong>Live Logs Console</strong>: Real-time game log streaming, making mod conflicts and crashes easy to diagnose.</li>
           </ul>
         </div>
       </div>
@@ -515,13 +514,13 @@
     <div class="container tech-container">
       <div class="tech-info reveal-fade-in">
         <div class="badge">ARCHITECTURE</div>
-        <h2>🛠️ 技術優勢與核心架構</h2>
+        <h2>🛠️ Technological Advantages & Core Architecture</h2>
         <p>
-          我們放棄了傳統 Java 或 Electron 等繁重的開發技術，採用業界最尖端的語言與渲染架構，確保了極致的執行效能。
+          We abandoned bloated technologies like Java GUI or Electron. By adopting cutting-edge systems programming languages and UI rendering frameworks, we ensure ultimate performance.
         </p>
 
         <div class="perf-comparison">
-          <div class="perf-title">記憶體佔用對比 (MB) - 越小越好</div>
+          <div class="perf-title">RAM Usage Comparison (MB) - Lower is Better</div>
           <div class="bar-chart">
             <div class="chart-row">
               <div class="chart-label">
@@ -534,7 +533,7 @@
             </div>
             <div class="chart-row">
               <div class="chart-label">
-                <span>傳統啟動器 (Electron 核心)</span>
+                <span>Traditional Launcher (Electron)</span>
                 <strong>~280 MB</strong>
               </div>
               <div class="chart-bar-container">
@@ -543,7 +542,7 @@
             </div>
             <div class="chart-row">
               <div class="chart-label">
-                <span>官方啟動器 (Java Runtime)</span>
+                <span>Official Launcher (Java Runtime)</span>
                 <strong>~350 MB</strong>
               </div>
               <div class="chart-bar-container">
@@ -564,7 +563,7 @@
             Rust (Tauri v2)
           </div>
           <div class="tech-desc">
-            <strong>後端核心</strong>：提供系統級記憶體安全保障、極致執行效率、原生系統 API 高速呼叫與極小化封裝體積（僅約 10MB）。
+            <strong>Backend Core</strong>: Provides system-level memory safety, extreme execution efficiency, high-speed native API calls, and ultra-small package size (~10MB).
           </div>
         </div>
 
@@ -579,7 +578,7 @@
             React + TS
           </div>
           <div class="tech-desc">
-            <strong>前端界面</strong>：基於現代化 React 組件與 TypeScript 嚴格類型檢查，建構出反應極速、狀態流暢的高水準 UI/UX。
+            <strong>Frontend Interface</strong>: Built on modern React components and TypeScript strict type-checking, delivering a highly responsive, fluid UI/UX.
           </div>
         </div>
 
@@ -592,7 +591,7 @@
             CSS Modules
           </div>
           <div class="tech-desc">
-            <strong>視覺樣式</strong>：元件級樣式封裝，避免全域污染。渲染出細緻的現代毛玻璃（Glassmorphism）與滑順 of 微動畫交互。
+            <strong>Styling</strong>: Component-level styling encapsulation to prevent global conflicts. Renders beautiful glassmorphism and smooth micro-animations.
           </div>
         </div>
       </div>
@@ -604,35 +603,35 @@
     <div class="container">
       <div class="section-header reveal-fade-in">
         <div class="badge">USER GROUPS</div>
-        <h2>💡 為什麼選擇 FocalCraft Launcher？</h2>
-        <p>無論你是哪一類 Minecraft 玩家，我們都有專屬為你設計的優勢</p>
+        <h2>💡 Why Choose FocalCraft Launcher?</h2>
+        <p>No matter what kind of Minecraft player you are, we have tailor-made advantages for you.</p>
       </div>
 
       <div class="why-grid">
         <!-- Group 1 -->
         <div class="why-card glow-card reveal-fade-in delay-1">
           <div class="why-icon">🍦</div>
-          <h3>給原版 (Vanilla) 玩家</h3>
+          <h3>For Vanilla Players</h3>
           <p>
-            追求簡潔與極速啟動。乾淨俐落的介面絕無廣告，自動下載最佳 Java，點擊即玩。
+            Pursue simplicity and speed. Clean, ad-free interface, automatic Java setup, click and play.
           </p>
         </div>
 
         <!-- Group 2 -->
         <div class="why-card glow-card reveal-fade-in delay-2">
           <div class="why-icon">🧪</div>
-          <h3>給模組 (Mod) 狂熱者</h3>
+          <h3>For Mod Enthusiasts</h3>
           <p>
-            內建一鍵搜尋 Modrinth / CurseForge，多個遊戲實例完全隔離，自由測試 Mod 組合而不怕存檔崩潰。
+            Built-in one-click search for Modrinth/CurseForge, fully isolated instances, freely test mods without worrying about corrupting saves.
           </p>
         </div>
 
         <!-- Group 3 -->
         <div class="why-card glow-card reveal-fade-in delay-3">
           <div class="why-icon">🏰</div>
-          <h3>給伺服器腐竹/社群</h3>
+          <h3>For Server Admins & Communities</h3>
           <p>
-            支援自訂實例設定檔與特定的伺服器列表預設，方便導出與分享，讓隊友可以用最傻瓜的方式一鍵加入。
+            Customize and export instance profiles and preset server lists. Share them easily so friends can join in one click.
           </p>
         </div>
       </div>
@@ -643,9 +642,9 @@
   <section id="download" class="cta-banner">
     <div class="container">
       <div class="cta-box glass-panel reveal-fade-in delay-1">
-        <h2 class="text-gradient">準備好體驗極致速度了嗎？</h2>
+        <h2 class="text-gradient">Ready to Experience Ultimate Speed?</h2>
         <p>
-          立即下載 FocalCraft Launcher，告別卡頓與記憶體不足，把每一兆硬體效能都留給你的世界。
+          Download FocalCraft Launcher now. Say goodbye to lag and memory limits, and save every megabyte of hardware power for your world.
         </p>
         <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 1rem;">
           <a href="https://github.com/focalsalt/FocalCraft-Launcher/releases/latest/download/Focal.Craft.Launcher_x64-setup.exe"
@@ -654,7 +653,7 @@
               <path
                 d="M0 3.449L9.75 2.1v9.45H0V3.449zM0 12.45h9.75v9.45L0 20.551v-8.101zM11.25 1.875L24 0v11.55H11.25V1.875zM11.25 12.45H24v11.55l-12.75-1.875V12.45z" />
             </svg>
-            Windows 下載 (EXE)
+            Windows Download (EXE)
           </a>
           <a href="https://github.com/focalsalt/FocalCraft-Launcher/releases/latest/download/Focal.Craft.Launcher_x64_en-US.msi"
             class="btn btn-secondary"
@@ -663,7 +662,7 @@
               <path
                 d="M0 3.449L9.75 2.1v9.45H0V3.449zM0 12.45h9.75v9.45L0 20.551v-8.101zM11.25 1.875L24 0v11.55H11.25V1.875zM11.25 12.45H24v11.55l-12.75-1.875V12.45z" />
             </svg>
-            Windows 安裝 (MSI)
+            Windows Install (MSI)
           </a>
           <a href="https://github.com/focalsalt/FocalCraft-Launcher" class="btn btn-secondary"
             style="padding: 1rem 2rem; font-size: 1.1rem;">
@@ -671,11 +670,11 @@
               <path
                 d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.579 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
             </svg>
-            GitHub 專案庫
+            GitHub Repository
           </a>
         </div>
         <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 1rem;">
-          支援 Windows 10/11 x64
+          Supports Windows 10/11 x64
         </div>
       </div>
     </div>
@@ -688,20 +687,20 @@
         <div class="footer-info">
           <div class="footer-logo">🌌 FocalCraft Launcher</div>
           <p class="footer-desc">
-            一款致力於極致流暢、功能強大且視覺精美的 Minecraft 啟動器。基於 Rust 底層與現代化網頁技術打造。
+            A Minecraft launcher dedicated to extreme smoothness, powerful functionality, and beautiful design. Built with a Rust core and modern web tech.
           </p>
         </div>
         <div class="footer-links">
           <div class="footer-column">
-            <h4>相關資源</h4>
+            <h4>Resources</h4>
             <ul>
-              <li><a href="#features">特色亮點</a></li>
-              <li><a href="#tech">技術架構</a></li>
-              <li><a href="https://github.com/focalsalt/focalsalt.github.io" target="_blank">GitHub 專案庫</a></li>
+              <li><a href="#features">Features</a></li>
+              <li><a href="#tech">Architecture</a></li>
+              <li><a href="https://github.com/focalsalt/focalsalt.github.io" target="_blank">GitHub Repository</a></li>
             </ul>
           </div>
           <div class="footer-column">
-            <h4>聯絡資訊</h4>
+            <h4>Contact</h4>
             <ul>
               <li><a href="https://github.com/focalsalt" target="_blank">FocalSalt GitHub</a></li>
             </ul>
@@ -711,8 +710,7 @@
 
       <div class="footer-bottom">
         <div class="disclaimer">
-          <strong>免責聲明</strong>：FocalCraft Launcher 是一款第三方的 Minecraft 啟動管理工具，與 Mojang AB、Microsoft 或 Xbox Game Studios
-          無官方關聯。Minecraft 的版權與商標為其各自所有者持有。
+          <strong>Disclaimer</strong>: FocalCraft Launcher is a third-party Minecraft launcher and management utility. It is not affiliated with Mojang AB, Microsoft, or Xbox Game Studios. Minecraft is a trademark of Mojang Synergies AB.
         </div>
         <div>
           © 2026 FocalSalt. All rights reserved.
@@ -778,11 +776,11 @@
       if (skinType === 'steve') {
         steveSvg.style.display = 'block';
         alexSvg.style.display = 'none';
-        skinName.innerText = 'Steve (經典)';
+        skinName.innerText = 'Steve (Classic)';
       } else {
         steveSvg.style.display = 'none';
         alexSvg.style.display = 'block';
-        skinName.innerText = 'Alex (細手臂)';
+        skinName.innerText = 'Alex (Slim)';
       }
     }
 
@@ -798,7 +796,7 @@
     let logIndex = 0;
 
     function simulateLaunch() {
-      alert("遊戲啟動模擬中... 將自動切換至「運行日誌」分頁查看啟動日誌！");
+      alert("Simulating launch... Automatically switching to Live Logs to view status!");
 
       // Auto-switch to logs subtab
       const logsTabBtn = document.getElementById('mock-subtab-btn-logs');
