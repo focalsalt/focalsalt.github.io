@@ -183,86 +183,84 @@
 
               <!-- VIEW: Overview (Instance detail in real app) -->
               <div id="mock-view-overview" class="mockup-view mockup-view-overview active">
-                <div>
-                  <div class="mockup-instance-header">
-                    <div class="mockup-instance-title">
-                      <span class="mockup-instance-title-icon">📦</span>
-                      <span class="mockup-instance-title-text">FocalCraft Main Sandbox</span>
+                <div class="mockup-instance-header">
+                  <div class="mockup-instance-title">
+                    <span class="mockup-instance-title-icon">📦</span>
+                    <span class="mockup-instance-title-text">FocalCraft Main Sandbox</span>
+                  </div>
+                  <!-- Inner sub-tabs exactly like real detail page -->
+                  <div class="mockup-subtabs">
+                    <div class="mockup-subtab active" onclick="showMockupSubTab('mods', this)">Mods Manager</div>
+                    <div id="mock-subtab-btn-logs" class="mockup-subtab" onclick="showMockupSubTab('logs', this)">Live Logs</div>
+                  </div>
+                </div>
+
+                <div class="mockup-subtab-container">
+                  <!-- Sub-pane: Mods management -->
+                  <div id="mock-subtab-mods" class="mockup-subtab-pane active">
+                    <div class="mockup-store-header">
+                      <input type="text" class="mockup-store-search" placeholder="Search & integrate Modrinth / CurseForge resources..."
+                        value="Sodium">
+                      <div class="mockup-store-tabs">
+                        <div class="mockup-store-tab active">Modrinth</div>
+                      </div>
                     </div>
-                    <!-- Inner sub-tabs exactly like real detail page -->
-                    <div class="mockup-subtabs">
-                      <div class="mockup-subtab active" onclick="showMockupSubTab('mods', this)">Mods Manager</div>
-                      <div id="mock-subtab-btn-logs" class="mockup-subtab" onclick="showMockupSubTab('logs', this)">Live Logs</div>
+                    <div class="mockup-store-grid">
+                      <div class="mockup-store-card">
+                        <div class="mockup-store-img"
+                          style="color: #4ee05d; background: rgba(78, 224, 93, 0.1); font-size: 0.65rem;">Na</div>
+                        <div class="mockup-store-info">
+                          <div class="mockup-store-name">Sodium</div>
+                          <div class="mockup-store-desc">Extreme optimization / Boost FPS</div>
+                        </div>
+                        <div class="mockup-store-dl" onclick="alert('Simulation: Sodium downloaded to sandbox instance!')">Install</div>
+                      </div>
+                      <div class="mockup-store-card">
+                        <div class="mockup-store-img"
+                          style="color: #00bcd4; background: rgba(0, 188, 212, 0.1); font-size: 0.65rem;">Ir</div>
+                        <div class="mockup-store-info">
+                          <div class="mockup-store-name">Iris Shaders</div>
+                          <div class="mockup-store-desc">High-performance shaders loader</div>
+                        </div>
+                        <div class="mockup-store-dl" onclick="alert('Simulation: Iris Shaders installed successfully!')">Install</div>
+                      </div>
+                      <div class="mockup-store-card">
+                        <div class="mockup-store-img"
+                          style="color: #ff9800; background: rgba(255, 152, 0, 0.1); font-size: 0.65rem;">Ph</div>
+                        <div class="mockup-store-info">
+                          <div class="mockup-store-name">Physics Mod</div>
+                          <div class="mockup-store-desc">Realistic gravity & ragdoll physics</div>
+                        </div>
+                        <div class="mockup-store-dl" onclick="alert('Simulation: Physics Mod downloading...')">Download</div>
+                      </div>
+                      <div class="mockup-store-card">
+                        <div class="mockup-store-img"
+                          style="color: #9c27b0; background: rgba(156, 39, 176, 0.1); font-size: 0.65rem;">Es</div>
+                        <div class="mockup-store-info">
+                          <div class="mockup-store-name">Essential Mod</div>
+                          <div class="mockup-store-desc">Easy multiplayer & cosmetics</div>
+                        </div>
+                        <div class="mockup-store-dl" onclick="alert('Simulation: Essential Mod imported successfully!')">Install</div>
+                      </div>
                     </div>
                   </div>
 
-                  <div class="mockup-subtab-container">
-                    <!-- Sub-pane: Mods management -->
-                    <div id="mock-subtab-mods" class="mockup-subtab-pane active">
-                      <div class="mockup-store-header">
-                        <input type="text" class="mockup-store-search" placeholder="Search & integrate Modrinth / CurseForge resources..."
-                          value="Sodium">
-                        <div class="mockup-store-tabs">
-                          <div class="mockup-store-tab active">Modrinth</div>
-                        </div>
+                  <!-- Sub-pane: Console Logs -->
+                  <div id="mock-subtab-logs" class="mockup-subtab-pane">
+                    <div class="mockup-logs-panel" id="mockup-console-logs">
+                      <div class="mockup-log-line"><span class="mockup-log-time">[10:30:15]</span> <span
+                          class="mockup-log-thread">[Client thread/INFO]:</span> Setting user: FocalSalt</div>
+                      <div class="mockup-log-line"><span class="mockup-log-time">[10:30:16]</span> <span
+                          class="mockup-log-thread">[Client thread/INFO]:</span> LWJGL Version: 3.3.1 build 7</div>
+                      <div class="mockup-log-line"><span class="mockup-log-time">[10:30:18]</span> <span
+                          class="mockup-log-thread">[Client thread/INFO]:</span> Auto-detected Java 17.0.8 (64-bit)
                       </div>
-                      <div class="mockup-store-grid">
-                        <div class="mockup-store-card">
-                          <div class="mockup-store-img"
-                            style="color: #4ee05d; background: rgba(78, 224, 93, 0.1); font-size: 0.65rem;">Na</div>
-                          <div class="mockup-store-info">
-                            <div class="mockup-store-name">Sodium</div>
-                            <div class="mockup-store-desc">Extreme optimization / Boost FPS</div>
-                          </div>
-                          <div class="mockup-store-dl" onclick="alert('Simulation: Sodium downloaded to sandbox instance!')">Install</div>
-                        </div>
-                        <div class="mockup-store-card">
-                          <div class="mockup-store-img"
-                            style="color: #00bcd4; background: rgba(0, 188, 212, 0.1); font-size: 0.65rem;">Ir</div>
-                          <div class="mockup-store-info">
-                            <div class="mockup-store-name">Iris Shaders</div>
-                            <div class="mockup-store-desc">High-performance shaders loader</div>
-                          </div>
-                          <div class="mockup-store-dl" onclick="alert('Simulation: Iris Shaders installed successfully!')">Install</div>
-                        </div>
-                        <div class="mockup-store-card">
-                          <div class="mockup-store-img"
-                            style="color: #ff9800; background: rgba(255, 152, 0, 0.1); font-size: 0.65rem;">Ph</div>
-                          <div class="mockup-store-info">
-                            <div class="mockup-store-name">Physics Mod</div>
-                            <div class="mockup-store-desc">Realistic gravity & ragdoll physics</div>
-                          </div>
-                          <div class="mockup-store-dl" onclick="alert('Simulation: Physics Mod downloading...')">Download</div>
-                        </div>
-                        <div class="mockup-store-card">
-                          <div class="mockup-store-img"
-                            style="color: #9c27b0; background: rgba(156, 39, 176, 0.1); font-size: 0.65rem;">Es</div>
-                          <div class="mockup-store-info">
-                            <div class="mockup-store-name">Essential Mod</div>
-                            <div class="mockup-store-desc">Easy multiplayer & cosmetics</div>
-                          </div>
-                          <div class="mockup-store-dl" onclick="alert('Simulation: Essential Mod imported successfully!')">Install</div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Sub-pane: Console Logs -->
-                    <div id="mock-subtab-logs" class="mockup-subtab-pane">
-                      <div class="mockup-logs-panel" id="mockup-console-logs">
-                        <div class="mockup-log-line"><span class="mockup-log-time">[10:30:15]</span> <span
-                            class="mockup-log-thread">[Client thread/INFO]:</span> Setting user: FocalSalt</div>
-                        <div class="mockup-log-line"><span class="mockup-log-time">[10:30:16]</span> <span
-                            class="mockup-log-thread">[Client thread/INFO]:</span> LWJGL Version: 3.3.1 build 7</div>
-                        <div class="mockup-log-line"><span class="mockup-log-time">[10:30:18]</span> <span
-                            class="mockup-log-thread">[Client thread/INFO]:</span> Auto-detected Java 17.0.8 (64-bit)
-                        </div>
-                        <div class="mockup-log-line"><span class="mockup-log-time">[10:30:20]</span> <span
-                            class="mockup-log-thread">[Client thread/INFO]:</span> Loading instances... sandboxed
-                          main_instance</div>
-                        <div class="mockup-log-line"><span class="mockup-log-time">[10:30:22]</span> <span
-                            class="mockup-log-thread">[Client thread/INFO]:</span> Active sandboxed configuration
-                          resolved.</div>
-                      </div>
+                      <div class="mockup-log-line"><span class="mockup-log-time">[10:30:20]</span> <span
+                          class="mockup-log-thread">[Client thread/INFO]:</span> Loading instances... sandboxed
+                        main_instance</div>
+                      <div class="mockup-log-line"><span class="mockup-log-time">[10:30:22]</span> <span
+                          class="mockup-log-thread">[Client thread/INFO]:</span> Active sandboxed configuration
+                        resolved.</div>
                     </div>
                   </div>
                 </div>
@@ -375,7 +373,7 @@
                   </div>
                   <div class="mockup-settings-item">
                     <div class="mockup-settings-label">Update Channel</div>
-                    <div class="mockup-settings-value">Stable (Release v2.0)</div>
+                    <div class="mockup-settings-value">Stable (Release v1.2.2)</div>
                   </div>
                 </div>
               </div>
@@ -402,14 +400,15 @@
           <div class="feature-icon-wrapper">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
               stroke-linejoin="round">
-              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
             </svg>
           </div>
-          <h3>⚡ Extremely Lightweight, Free Every Megabyte of RAM</h3>
-          <p>Say goodbye to traditional launchers that consume hundreds of MBs of memory. Keep resources for what matters most: the game itself.</p>
+          <h3>🔒 1. Bank-grade Account Security</h3>
+          <p>Microsoft OAuth secure authentication combined with Windows DPAPI system-level encryption protects your account privacy.</p>
           <ul class="feature-list">
-            <li><strong>Rust Backend</strong>: Built on Tauri v2 rendering framework, extremely small footprint, launches in a flash.</li>
-            <li><strong>Native Smoothness</strong>: Low background resource usage, ensuring maximum game FPS.</li>
+            <li><strong>Microsoft OAuth Login</strong>: Uses official secure device code flow (Device Code Flow) to guarantee passwords never pass through third parties. Supports offline mode.</li>
+            <li><strong>DPAPI Encryption</strong>: Sensitive credentials and tokens are securely encrypted using Windows' built-in DPAPI encryption and stored in accounts.cfg, preventing copying and decryption on other machines.</li>
           </ul>
         </div>
 
@@ -457,17 +456,15 @@
           <div class="feature-icon-wrapper">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
               stroke-linejoin="round">
-              <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-              <circle cx="8.5" cy="7" r="4" />
-              <polyline points="17 11 19 13 23 9" />
+              <path d="M20.38 3.46L16 2.14a2 2 0 0 0-1.16 0L10.4 3.46A2 2 0 0 0 9 5.38V7h6V5.5a.5.5 0 0 1 .5-.5h.5a.5.5 0 0 1 .5.5V7h6V5.38a2 2 0 0 0-1.42-1.92z" />
+              <path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8H4z" />
             </svg>
           </div>
-          <h3>👕 Flexible "Skin Wardrobe"</h3>
-          <p>Perfect skin management module, providing local skin storage and one-click sync to Mojang.</p>
+          <h3>👕 4. Flexible "Skin Wardrobe"</h3>
+          <p>3D live skin preview and local skin management module, providing one-click sync to Mojang.</p>
           <ul class="feature-list">
-            <li><strong>Microsoft OAuth Login</strong>: Uses official secure device code flow, supports offline mode.</li>
-            <li><strong>Local Wardrobe</strong>: Collect unlimited skins (Classic / Slim) and upload to Mojang servers in one click.</li>
-            <li><strong>Cape Fast Switching</strong>: Easily manage and switch Mojang official capes.</li>
+            <li><strong>3D Live Preview</strong>: Built-in interactive 3D skin renderer powered by skinview3d, supporting Classic and Slim (Alex) model displays.</li>
+            <li><strong>Local Collection & Sync</strong>: Store unlimited skins locally, upload to Mojang servers in one click, and switch or disable official capes instantly.</li>
           </ul>
         </div>
 
@@ -498,11 +495,11 @@
               <line x1="6" y1="20" x2="6" y2="14" />
             </svg>
           </div>
-          <h3>📊 Live Console & Crash Protection</h3>
-          <p>Meticulously designed log and progress modules, making the game execution transparent.</p>
+          <h3>📊 6. Live Diagnosis & Session Control</h3>
+          <p>Meticulously designed diagnostics and session control, making game execution transparent and manageable.</p>
           <ul class="feature-list">
-            <li><strong>Launch HUD</strong>: Beautiful progress bar and status HUD to show loading stages clearly.</li>
-            <li><strong>Live Logs Console</strong>: Real-time game log streaming, making mod conflicts and crashes easy to diagnose.</li>
+            <li><strong>Launch Progress HUD</strong>: Beautiful progress bar and status HUD to show loading stages clearly.</li>
+            <li><strong>Live Logs & Control</strong>: Real-time game log streaming to locate conflicts/crashes, plus session cancellation or one-click force terminate (Kill) for frozen games.</li>
           </ul>
         </div>
       </div>
